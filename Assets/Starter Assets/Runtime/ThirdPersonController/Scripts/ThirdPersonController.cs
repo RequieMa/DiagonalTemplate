@@ -121,6 +121,10 @@ namespace StarterAssets
 #endif
             }
         }
+        public StarterAssetsInputs CursorInput
+        {
+            get { return _input; }
+        }
 
 
         private void Awake()
