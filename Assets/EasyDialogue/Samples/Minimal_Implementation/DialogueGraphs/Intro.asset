@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Easy Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1864, y: -40}
+  position: {x: -1832, y: -312}
   ports:
     keys:
     - previousNodes
@@ -34,7 +34,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: previousNodes
-        node: {fileID: -7067617260241818004}
+        node: {fileID: 6289148932726701038}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -43,8 +43,8 @@ MonoBehaviour:
   previousNodes: {fileID: 0}
   nextNode: {fileID: 0}
   characterDialogue:
-    text: Hello there, I'm {CharacterName}! Let's quick go through some tutorial
-      info, before we get to the real dialogue! Press the <b>'N'</b> to continue.
+    text: Hello Zili, I'm {CharacterName}! Let's quick go through some tutorial info,
+      before we get to the real dialogue! Press the <b>'N'</b> to continue.
     associatedCharacter: {fileID: 11400000, guid: 047192799680f174ca67cc9509c63e66,
       type: 2}
     isExpanded: 0
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_Name: Easy Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -264, y: -88}
+  position: {x: -296, y: -136}
   ports:
     keys:
     - previousNodes
@@ -119,11 +119,12 @@ MonoBehaviour:
   m_Name: Easy Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1496, y: -40}
+  position: {x: -1512, y: 184}
   ports:
     keys:
     - previousNodes
     - nextNode
+    - nextNode0
     values:
     - _fieldName: previousNodes
       _node: {fileID: -7067617260241818004}
@@ -131,7 +132,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: nextNode
-        node: {fileID: -9000421542169346396}
+        node: {fileID: 6289148932726701038}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -141,14 +142,23 @@ MonoBehaviour:
       _node: {fileID: -7067617260241818004}
       _typeQualifiedName: EasyDialogue.EasyDialogueNode, EasyDialogue, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: nextNode0
+      _node: {fileID: -7067617260241818004}
+      _typeQualifiedName: EasyDialogue.EasyDialogueNode, EasyDialogue, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: previousNodes
         node: {fileID: -4467255376643611769}
         reroutePoints: []
       _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
+      _connectionType: 1
+      _typeConstraint: 1
+      _dynamic: 1
   previousNodes: {fileID: 0}
   nextNode: {fileID: 0}
   characterDialogue:
@@ -158,8 +168,12 @@ MonoBehaviour:
       type: 2}
     isExpanded: 0
     scrollPos: {x: 0, y: 0}
-  hasPlayerResponses: 0
-  playerResponses: []
+  hasPlayerResponses: 1
+  playerResponses:
+  - text: djnegosg
+    associatedCharacter: {fileID: 0}
+    isExpanded: 1
+    scrollPos: {x: 0, y: 0}
   showCharacterDialogue: 1
 --- !u!114 &-5953279782004409138
 MonoBehaviour:
@@ -287,7 +301,7 @@ MonoBehaviour:
       _typeQualifiedName: EasyDialogue.EasyDialogueNode, EasyDialogue, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: nextNode
+      - fieldName: nextNode0
         node: {fileID: -7067617260241818004}
         reroutePoints: []
       _direction: 0
@@ -401,6 +415,7 @@ MonoBehaviour:
   - {fileID: 7383202602298625548}
   - {fileID: -4467255376643611769}
   - {fileID: -7067617260241818004}
+  - {fileID: 6289148932726701038}
   root: {fileID: -9000421542169346396}
 --- !u!114 &911351343253201368
 MonoBehaviour:
@@ -415,7 +430,7 @@ MonoBehaviour:
   m_Name: Easy Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -264, y: 184}
+  position: {x: -312, y: 280}
   ports:
     keys:
     - previousNodes
@@ -575,7 +590,7 @@ MonoBehaviour:
   m_Name: Easy Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -264, y: 40}
+  position: {x: -328, y: 88}
   ports:
     keys:
     - previousNodes
@@ -617,6 +632,60 @@ MonoBehaviour:
   hasPlayerResponses: 0
   playerResponses: []
   showCharacterDialogue: 0
+--- !u!114 &6289148932726701038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23f29d5d8a82bd44d9b748619b1c3d5a, type: 3}
+  m_Name: Easy Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1832, y: -72}
+  ports:
+    keys:
+    - previousNodes
+    - nextNode
+    values:
+    - _fieldName: previousNodes
+      _node: {fileID: 6289148932726701038}
+      _typeQualifiedName: EasyDialogue.EasyDialogueNode, EasyDialogue, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: nextNode
+        node: {fileID: -9000421542169346396}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: nextNode
+      _node: {fileID: 6289148932726701038}
+      _typeQualifiedName: EasyDialogue.EasyDialogueNode, EasyDialogue, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: previousNodes
+        node: {fileID: -7067617260241818004}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  previousNodes: {fileID: 0}
+  nextNode: {fileID: 0}
+  characterDialogue:
+    text: 2nd line
+    associatedCharacter: {fileID: 11400000, guid: 047192799680f174ca67cc9509c63e66,
+      type: 2}
+    isExpanded: 0
+    scrollPos: {x: 0, y: 0}
+  hasPlayerResponses: 0
+  playerResponses: []
+  showCharacterDialogue: 1
 --- !u!114 &7383202602298625548
 MonoBehaviour:
   m_ObjectHideFlags: 0
